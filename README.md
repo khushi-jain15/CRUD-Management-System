@@ -154,10 +154,6 @@ This project is licensed under the ISC License.
 - GitHub: [@khushi-jain15](https://github.com/khushi-jain15)
 - Live Demo : ([https://crud-management-system.onrender.com/](https://crud-management-system.onrender.com/)
 
-## Screenshots
-
-*Add screenshots of your application here*
-
 ---
 
 **Note**: Make sure to create the `uploads/` directory if it doesn't exist, as it's used to store uploaded profile pictures.
