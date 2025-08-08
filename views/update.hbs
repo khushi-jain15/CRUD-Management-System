@@ -3,17 +3,28 @@
 {{>navbar}}
 <div class="container">
     <h5 class="bg-success text-light text-center mt-2 p-2">CRUD Application</h5>
-    <form class="mytable" action="/update/{{data._id}}" method="post">
+    <form class="mytable" action="/update/{{data._id}}" method="post" enctype="multipart/form-data">
         <div class="row">
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">Name</label>
-            <input type="text" class="form-control" name="name" value="{{data.name}}" />
+            <input type="text" class="form-control" name="name" value="{{data.name}}" required />
+        </div>
+        <div class="mb-3 col-md-6 col-12">
+            <label class="form-label">Profile Picture</label>
+            {{#if data.profilePicture}}
+            <div class="mb-2">
+                <img src="/uploads/{{data.profilePicture}}" alt="Current Profile Picture" class="img-thumbnail" style="max-width: 100px; max-height: 100px;">
+                <small class="text-muted d-block">Current profile picture</small>
+            </div>
+            {{/if}}
+            <input type="file" class="form-control" name="profilePicture" accept="image/*" />
+            <small class="text-muted">Upload a new profile picture (JPG, PNG, GIF - Max 5MB)</small>
         </div>
         </div>
         <div class="row">
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">Age</label>
-            <input type="number" class="form-control" name="age" value="{{data.age}}" />
+            <input type="number" class="form-control" name="age" value="{{data.age}}" required />
         </div>
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">Salary</label>
@@ -23,19 +34,19 @@
         <div class="row">
         <div class="mb-3  col-md-6 col-12">
             <label class="form-label">Email Address</label>
-            <input type="email" class="form-control" name="email" value="{{data.email}}"/>
+            <input type="email" class="form-control" name="email" value="{{data.email}}" required />
             
         </div>
         
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">Mobile No</label>
-            <input type="text" class="form-control" name="phone" value="{{data.phone}}" />
+            <input type="text" class="form-control" name="phone" value="{{data.phone}}" required />
         </div>
         </div>
         <div class="row">
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">Designation</label>
-            <input type="text" class="form-control" name="desig" value="{{data.desig}}" />
+            <input type="text" class="form-control" name="desig" value="{{data.desig}}" required />
         </div>
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">City</label>

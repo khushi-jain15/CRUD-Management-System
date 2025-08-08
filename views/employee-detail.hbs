@@ -1,0 +1,81 @@
+{{>header}}
+<title>Employee Details - {{data.name}}</title>
+{{>navbar}}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">
+                        <a href="/" class="text-white text-decoration-none me-3">
+                            <span class="material-symbols-outlined">arrow_back</span>
+                        </a>
+                        Employee Details
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center mb-3">
+                            {{#if data.profilePicture}}
+                                <img src="/uploads/{{data.profilePicture}}" alt="{{data.name}}" class="img-fluid rounded-circle shadow" style="max-width: 200px; max-height: 200px; object-fit: cover;">
+                            {{else}}
+                                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 200px; height: 200px;">
+                                    <span class="material-symbols-outlined text-muted" style="font-size: 4rem;">person</span>
+                                </div>
+                            {{/if}}
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-sm-6 mb-3">
+                                    <strong class="text-muted">Employee ID:</strong>
+                                    <p class="mb-0">{{data.employeeId}}</p>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <strong class="text-muted">Name:</strong>
+                                    <p class="mb-0">{{data.name}}</p>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <strong class="text-muted">Age:</strong>
+                                    <p class="mb-0">{{data.age}} years</p>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <strong class="text-muted">Designation:</strong>
+                                    <p class="mb-0">{{data.desig}}</p>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <strong class="text-muted">Email:</strong>
+                                    <p class="mb-0">{{data.email}}</p>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <strong class="text-muted">Phone:</strong>
+                                    <p class="mb-0">{{data.phone}}</p>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <strong class="text-muted">Salary:</strong>
+                                    <p class="mb-0">₹{{data.salary}}</p>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <strong class="text-muted">City:</strong>
+                                    <p class="mb-0">{{data.city}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12 text-center">
+                            <a href="/update/{{data._id}}" class="btn btn-primary me-2">
+                                <span class="material-symbols-outlined">edit</span>
+                                Edit Employee
+                            </a>
+                            <a href="/" class="btn btn-secondary">
+                                <span class="material-symbols-outlined">list</span>
+                                Back to List
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{>footer}} 

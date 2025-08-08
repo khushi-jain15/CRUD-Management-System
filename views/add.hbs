@@ -3,17 +3,22 @@
 {{>navbar}}
 <div class="container">
     <h5 class="bg-primary text-light text-center mt-2 p-2">CRUD Application</h5>
-    <form class="mytable" action="/add" method="post">
+    <form class="mytable" action="/add" method="post" enctype="multipart/form-data">
         <div class="row">
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">Name</label>
-            <input type="text" class="form-control" name="name" placeholder="Enter Name Hear" />
+            <input type="text" class="form-control" name="name" placeholder="Enter Name Hear" required />
+        </div>
+        <div class="mb-3 col-md-6 col-12">
+            <label class="form-label">Profile Picture</label>
+            <input type="file" class="form-control" name="profilePicture" accept="image/*" />
+            <small class="text-muted">Upload a profile picture (JPG, PNG, GIF - Max 5MB)</small>
         </div>
         </div>
         <div class="row">
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">Age</label>
-            <input type="number" class="form-control" name="age" placeholder="Enter Age" />
+            <input type="number" class="form-control" name="age" placeholder="Enter Age" required />
         </div>
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">Salary</label>
@@ -23,19 +28,19 @@
         <div class="row">
         <div class="mb-3  col-md-6 col-12">
             <label class="form-label">Email Address</label>
-            <input type="email" class="form-control" name="email" placeholder="Enter Email"/>
+            <input type="email" class="form-control" name="email" placeholder="Enter Email" required />
             
         </div>
         
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">Mobile No</label>
-            <input type="text" class="form-control" name="phone" placeholder="Enter Mobile No" />
+            <input type="text" class="form-control" name="phone" placeholder="Enter Mobile No" required />
         </div>
         </div>
         <div class="row">
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">Designation</label>
-            <input type="text" class="form-control" name="desig" placeholder="Enter Designation" />
+            <input type="text" class="form-control" name="desig" placeholder="Enter Designation" required />
         </div>
         <div class="mb-3 col-md-6 col-12">
             <label class="form-label">City</label>
