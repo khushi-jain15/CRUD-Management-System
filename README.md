@@ -152,6 +152,7 @@ This project is licensed under the ISC License.
 
 **Khushi Jain**
 - GitHub: [@khushi-jain15](https://github.com/khushi-jain15)
+- Live Demo : ([https://crud-management-system.onrender.com/](https://crud-management-system.onrender.com/)
 
 ## Screenshots
 
